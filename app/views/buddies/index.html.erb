@@ -1,2 +1,12 @@
-<h1>Buddies#index</h1>
-<p>Find me in app/views/buddies/index.html.erb</p>
+<h1>Buddies</h1>
+<ul>
+  <% @buddies.each do |buddy| %>
+    <li>
+      <%= link_to buddy.name, buddy_path(buddy) %>
+      <p><%= buddy.description %></p>
+      <p><%= price_per_day(buddy.price) %></p>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Buddy", new_buddy_path%>
