@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'buddies/show'
   get 'buddies/new'
   get 'buddies/create'
-  root to: "pages#home"
+  # root to: "pages#home"
   root 'buddies#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
