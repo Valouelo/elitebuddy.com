@@ -9,8 +9,12 @@
     <%= form.text_area :description %>
   </div>
   <div>
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.label :price_per_day %>
+    <%= form.number_field :price_per_day %>
+  </div>
+    <div>
+    <%= form.label :options %>
+    <%= form.select :options %>
   </div>
   <%= form.submit 'Create Buddy' %>
 <% end %>
