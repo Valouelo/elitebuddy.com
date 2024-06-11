@@ -1,0 +1,9 @@
+<h1>Book ton buddy</h1>
+
+<%= @buddy.name %>
+
+<%= simple_form_for([@buddy, @booking]) do |f| %>
+  <%= f.input :start_time %>
+  <%= f.input :end_time %>
+  <%= f.submit %>
+<% end %>
