@@ -9,9 +9,8 @@ class BookingsController < ApplicationController
     @buddy = Buddy.find(params[:buddy_id].to_i)
     @booking.buddy = @buddy
     @booking.user = current_user
-    raise
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to buddy_booking_path(@buddy, @booking)
     else
       render :new, status: :unprocessable_entity
     end
