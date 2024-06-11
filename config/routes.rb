@@ -12,9 +12,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :buddies do
-    resources :bookings, only: [:create, :index]
+    resources :bookings, only: [:new ,:create, :index]
   end
   # Defines the root path route ("/")
   # root "posts#index"
 end
-
