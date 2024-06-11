@@ -1,9 +1,11 @@
 <h1>Buddies</h1>
 <ul>
+<%= Buddy.all %>
   <% @buddies.each do |buddy| %>
     <li>
       <%= link_to buddy.name, buddy_path(buddy) %>
       <p><%= buddy.description %></p>
+      <p><%= buddy.options %><p>
       <p><%= price_per_day(buddy.price) %></p>
     </li>
   <% end %>
