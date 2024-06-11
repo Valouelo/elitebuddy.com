@@ -1,6 +1,5 @@
 <h1>Buddies</h1>
 <ul>
-<%= Buddy.all %>
   <% @buddies.each do |buddy| %>
     <li>
       <%= link_to buddy.name, buddy_path(buddy) %>
