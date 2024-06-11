@@ -1,0 +1,8 @@
+<h1>Book ton buddy</h1>
+
+<%= buddy.name %>
+
+<%= form_with model: [@buddy, @buddy.bookings.build], local: true do |form| %>
+ <div> <%= form.label :start_date %> <%= form.date_field :start_date %> </div>
+ <div> <%= form.label :end_date %> <%= form.date_field :end_date %> </div>
+  <%= form.select :criteria, options_for_select(Booking::CRITERIA), include_blank: ‘Select Criteria’ %> </div>
