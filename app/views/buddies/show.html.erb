@@ -24,7 +24,12 @@
       <div class="row">
         <div class="col-md-8">
 
-          <div class="card p-3 mb-3"><img src="images/deliveroo.png" alt="" width="140px">
+          <div class="card p-3 mb-3">
+           <% if @buddy.photo.attached? %>
+            <%= image_tag @buddy.photo width="140px"%>
+          <% else %>
+             <img src="images/deliveroo.png" alt="" width="140px">
+          <% end %>
             <h2><%= @buddy.name %></h2>
             <span><%= @buddy.price_per_day %>€ la journée</span>
           </div>
@@ -75,6 +80,7 @@
             <div class="d-flex justify-content-between mt-3">
               <p><strong>Total Prix</strong></p>
               <p><strong><%= link_to "Book this Buddy", new_buddy_booking_path(@buddy), class: 'btn btn-primary' %></strong></p>
+              <p><strong><%= link_to "Edit Buddy", edit_buddy_path(@buddy), class: 'btn btn-secondary' %></strong></p>
             </div>
           </div>
         </div>

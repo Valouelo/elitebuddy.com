@@ -1,7 +1,7 @@
 <div class="container">
-  <h1>New Buddy</h1>
-  <%= form_with model: @buddy, local: true do |form| %>
-    <div>
+  <h1>Edit Buddy</h1>
+  <%= form_with model: @buddy, url: buddy_path(@buddy), method: :patch do |form| %>
+     <div>
       <%= form.label :photo %>
       <%= form.file_field :photo %>
     </div>
@@ -22,7 +22,7 @@
       <%= form.select :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"] %>
     </div>
     <div>
-      <%= form.submit 'Create Buddy' %>
+      <%= form.submit 'Update Buddy' %>
     </div>
   <% end %>
 </div>

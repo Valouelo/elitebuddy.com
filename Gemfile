@@ -52,6 +52,7 @@ gem "sassc-rails"
 gem 'devise'
 gem "cloudinary"
 
+
 group :development, :test do
   gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

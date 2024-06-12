@@ -1,6 +1,6 @@
 class BuddiesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_buddy, only: [:show]
+  before_action :set_buddy, only: [:show, :edit, :update]
 
   def index
     @buddies = Buddy.all
@@ -22,6 +22,17 @@ class BuddiesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @buddy.update(buddy_params)
+      redirect_to @buddy, notice: 'Buddy was successfully updated.'
+    else
+      puts @buddy.errors.full_messages  # Affichez les erreurs dans la console pour le débogage
+      render :edit
+    end
+  end
 
   private
 
@@ -30,6 +41,6 @@ class BuddiesController < ApplicationController
   end
 
   def buddy_params
-    params.require(:buddy).permit(:name, :description, :price)
+    params.require(:buddy).permit(:name, :description, :price_per_day, :options, :photo)
   end
 end
