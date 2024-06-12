@@ -1,0 +1,22 @@
+<!-- app/views/bookings/new.html.erb -->
+<h1>Book ton buddy</h1>
+
+<p><%= @buddy.name %></p>
+<div data-controller="price">
+
+<%= simple_form_for([@buddy, @booking]) do |f| %>
+  <%= f.input :start_time,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :end_time,
+            as: :string,
+            input_html: { data: { controller: "datepicker" } } %>
+  <%= f.input :total_price, readonly: true, input_html: { id: 'booking_total_price' } %>
+
+
+  <%= f.submit %>
+
+</div>
+
+
+<% end %>

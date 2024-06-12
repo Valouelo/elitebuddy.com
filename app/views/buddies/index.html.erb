@@ -1,13 +1,60 @@
-<h1>Buddies</h1>
-<ul>
-  <% @buddies.each do |buddy| %>
-    <li>
-      <%= link_to buddy.name, buddy_path(buddy) %>
-      <p><%= buddy.description %></p>
-      <p><%= buddy.options %><p>
-      <p><%= price_per_day(buddy.price) %></p>
-    </li>
-  <% end %>
-</ul>
+<div class="page-container">
 
-<%= link_to "New Buddy", new_buddy_path%>
+ <div class="banner-container">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner" %>);">
+      <div class="container">
+        <h1><strong>Boost ton projet web avec l'elite des buddies !</strong></h1>
+      </div>
+  </div>
+
+
+  <h2>Buddies</h2>
+
+  <!-- Barre de filtrage -->
+<div class="filter-bar">
+  <!-- Champ de filtrage pour le prix -->
+  <label for="price-filter">Price:</label>
+  <input type="text" id="price-filter" name="price-filter" placeholder="Enter price">
+
+  <!-- Champ de filtrage pour la date de début -->
+  <label for="start-date-filter">Start Date:</label>
+  <input type="date" id="start-date-filter" name="start-date-filter">
+
+  <!-- Champ de filtrage pour la date de fin -->
+  <label for="end-date-filter">End Date:</label>
+  <input type="date" id="end-date-filter" name="end-date-filter">
+
+  <!-- Bouton de soumission du formulaire de filtrage -->
+  <button type="button" onclick="filterBuddies()">Filter</button>
+</div>
+
+
+<div class="grid-container" id="buddies-container">
+  <% @buddies.each do |buddy| %>
+    <!-- Envelopper toute la carte dans une balise de lien -->
+    <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
+      <div class="name-description-container"> <!-- Conteneur pour le nom et la description -->
+        <span class="name"><%= buddy.name %>,</span> <!-- Afficher le nom du buddy -->
+        <span class="description"><%= buddy.description %></span> <!-- Afficher la description du buddy -->
+      </div>
+      <p class="options"><%= buddy.options %></p>
+      <p class="price"><%= buddy.price_per_day %> Bitcoin par jour</p> <!-- Afficher le prix par jour -->
+    </a>
+  <% end %>
+</div>
+
+<%# <script>
+  function filterBuddies() {
+    // Récupérer les valeurs des champs de filtrage
+    var priceFilter = document.getElementById('price-filter').value;
+    var startDateFilter = document.getElementById('start-date-filter').value;
+    var endDateFilter = document.getElementById('end-date-filter').value;
+
+    // Effectuer le filtrage des buddies selon les critères choisis
+    // Vous pouvez utiliser ces valeurs pour effectuer des requêtes AJAX ou filtrer les buddies côté client
+    // Par exemple, vous pouvez utiliser les valeurs pour afficher uniquement les buddies qui correspondent aux critères sélectionnés
+  }
+</script> %>
+
+  <%= link_to "New Buddy", new_buddy_path, class: "my-link"%>
+</div>
