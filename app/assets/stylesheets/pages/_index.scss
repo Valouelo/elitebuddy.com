@@ -1,2 +1,82 @@
 // Import page-specific CSS files here.
 @import "home";
+
+/* Define the page container */
+.page-container {
+  margin: 20px; /* Adjust the margin as needed */
+  padding: 20px; /* Adjust the padding as needed */
+  border: 1px solid #ccc; /* Optional: Add a border to better visualize the container */
+  border-radius: 8px; /* Optional: Add border radius for rounded corners */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Réduire légèrement la hauteur de la bannière */
+  width: 100%; /* La bannière occupera 100% de la largeur du conteneur parent */
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center; /* Centrer le texte */
+}
+
+/* Navigation bar styles */
+.filter-nav {
+  margin-bottom: 20px;
+}
+
+// Define a grid container
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Adjust the number of columns as needed
+  grid-gap: 10px; // Adjust the gap between grid items as needed
+}
+
+
+/* Apply the grid container to your div */
+.my-div {
+  grid-column: span 1; /* Adjust the number of columns the div should span */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff; /* Set background to white for each grid item */
+
+  /* Additional styles for my-div */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.my-div:hover {
+  transform: translateY(-2px); /* Move the div up slightly on hover */
+}
+
+// Define the button styles
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+// Apply the button styles to the link
+.my-link {
+  @extend .button;
+}

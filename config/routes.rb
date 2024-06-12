@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'buddies/index'
-  get 'buddies/show'
-  get 'buddies/new'
-  get 'buddies/create'
+
   root 'buddies#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -12,7 +9,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   resources :buddies do
-    resources :bookings, only: [:new, :create, :index]
+    resources :bookings, only: [:new, :create, :index, :show, :edit]
   end
   # Defines the root path route ("/")
   # root "posts#index"
