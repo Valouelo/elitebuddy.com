@@ -26,7 +26,11 @@
 
           <div class="card p-3 mb-3">
            <% if @buddy.photo.attached? %>
+
+            <%= image_tag @buddy.photo, width: 250 %>
+
             <%= image_tag @buddy.photo, class: "rounded-circle img-thumbnail", width: "140px"%>
+
           <% else %>
              <img src="images/deliveroo.png" alt="" width="140px">
           <% end %>
