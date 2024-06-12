@@ -1,5 +1,4 @@
 User.destroy_all
-Buddy.destroy_all
 user = User.create!(email: "lolo@gmail.com", password: "valentine")
 user2 = User.create!(email: "valou@gmail.com", password: "valentine")
 
