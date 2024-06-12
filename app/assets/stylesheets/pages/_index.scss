@@ -7,7 +7,7 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
 }
 
 .banner {
@@ -23,12 +23,17 @@
 }
 
 .banner h1 {
-  margin: 0;
+  margin: 0px;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   font-size: 32px;
   font-weight: bold;
-  text-align: center; /* Centrer le texte */
+  text-align: center;
+}
+
+h2 {
+  margin-top: 60px;
+  text-align: center;
 }
 
 /* Styles pour la barre de filtrage */
@@ -37,6 +42,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 /* Styles pour les étiquettes des champs de filtrage */
@@ -55,7 +62,7 @@
 /* Styles pour le bouton de filtrage */
 .filter-bar button {
   padding: 8px 16px;
-  background-color: #007bff;
+  background-color: #daa520;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -90,6 +97,7 @@
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  position: relative;
 }
 
 .my-div:hover {
@@ -138,11 +146,20 @@ a {
   text-decoration: none;
 }
 
-/* Style pour le conteneur de la carte */
-.my-div {
-  position: relative; /* Définir la position relative pour permettre le positionnement absolu du bouton */
+.image-container {
+  width: 100%;
+  height: 200px; /* Ajustez la hauteur de l'image selon vos besoins */
+  overflow: hidden;
 }
 
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.text-container {
+  padding: 20px;
+}
 /* Style for the button */
 .view-buddy-button {
   position: absolute; /* Position absolue pour positionner le bouton */
@@ -150,7 +167,7 @@ a {
   right: 10px; /* Positionner le bouton à droite */
   padding: 8px 16px;
   font-size: 14px;
-  background-color: #ea87f7;
+  background-color: #556b2f;
   color: #fff;
   border: none;
   border-radius: 5px;

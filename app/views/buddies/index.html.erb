@@ -38,15 +38,17 @@
         <% else %>
             <img src="images/deliveroo.png" alt="" width="100px">
         <% end %>
+      </div>
+      <div>
         <span class="name"><%= buddy.name %>,</span>
         <span class="description"><%= buddy.description %></span>
       </div>
       <p class="options"><%= buddy.options %></p>
       <p class="price"><%= buddy.price_per_day %> Bitcoin par jour</p>
        <button class="view-buddy-button">Voir le buddy</button>
-
     </a>
   <% end %>
+  </div>
 </div>
 
 <%# <script>
