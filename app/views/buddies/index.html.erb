@@ -1,7 +1,7 @@
 <div class="page-container">
 
  <div class="banner-container">
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner" %>);">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Banner_projet" %>);">
       <div class="container">
         <h1><strong>Boost ton projet web avec l'elite des buddies !</strong></h1>
       </div>
@@ -33,6 +33,11 @@
   <% @buddies.each do |buddy| %>
     <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
       <div class="name-description-container">
+        <% if buddy.photo.attached? %>
+          <%= image_tag buddy.photo, class: "rounded-circle img-thumbnail", width: "100px"%>
+        <% else %>
+            <img src="images/deliveroo.png" alt="" width="100px">
+        <% end %>
         <span class="name"><%= buddy.name %>,</span>
         <span class="description"><%= buddy.description %></span>
       </div>
