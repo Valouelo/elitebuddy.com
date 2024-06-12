@@ -1,6 +1,9 @@
 <h1>New Buddy</h1>
 <%= form_with model: @buddy, local: true do |form| %>
   <div>
+    <%= form.input :phoot, as: :file %>
+  </div>
+  <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
