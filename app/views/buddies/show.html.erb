@@ -1,6 +1,13 @@
+<% if @buddy.photo.attached? %>
+  <%= image_tag @buddy.photo %>
+<% else %>
+  <p>No photo available</p>
+<% end %>
+
 <h1><%= @buddy.name %></h1>
 <p><%= @buddy.description %></p>
+<p><%= @buddy.options %></p>
 <p><%= @buddy.price_per_day %></p>
 
 <%= link_to "Book this Buddy", new_buddy_booking_path(@buddy), class: 'btn btn-primary' %>
-
+<%= link_to "Edit Buddy", edit_buddy_path(@buddy), class: 'btn btn-secondary' %>
