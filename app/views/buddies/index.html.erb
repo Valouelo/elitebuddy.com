@@ -1,10 +1,12 @@
-
 <div class="page-container">
 
  <div class="banner-container">
-    <h1>Boost ton projet web avec l'elite des buddies</h1>
-    <img src="path/to/your/banner-image.jpg" alt="Banner Image" class="banner-image">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner" %>);">
+      <div class="container">
+        <h1><strong>Boost ton projet web avec l'elite des buddies !</strong></h1>
+      </div>
   </div>
+
 
   <h2>Buddies</h2>
 
@@ -17,15 +19,16 @@
     <div class="grid-container" id="buddies-container">
         <% @buddies.each do |buddy| %>
           <div class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price_per_day="<%= buddy.price_per_day %>">
-              <div class="name-description-container"> <!-- Conteneur pour le nom et la description -->
-                  <span class="inline"><%= link_to buddy.name, buddy_path(buddy) %>,</span> <!-- Ajout de la virgule après le lien du nom -->
-                  <span class="inline"><%= buddy.description %></span> <!-- Affichage de la description sur la même ligne -->
+            <div class="name-description-container"> <!-- Conteneur pour le nom et la description -->
+              <span class="inline"><%= link_to buddy.name, buddy_path(buddy) %>,</span> <!-- Ajout de la virgule après le lien du nom -->
+              <span class="inline"><%= buddy.description %></span> <!-- Affichage de la description sur la même ligne -->
               </div>
               <p><%= buddy.options %></p>
               <p><%= buddy.price_per_day %> € par jour</p> <!-- Ajout de "€ par jour" à la suite du prix -->
             </div>
         <% end %>
-        </div>
+    </div>
+
 
   <script>
     function filterBuddies(category) {

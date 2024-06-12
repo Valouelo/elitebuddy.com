@@ -10,9 +10,25 @@
   background-color: #f9f9f9; /* Optional: Add a background color */
 }
 
-.banner-image {
-  width: 100%; /* Make the image take the full width of the container */
-  height: auto; /* Maintain the aspect ratio of the image */
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Réduire légèrement la hauteur de la bannière */
+  width: 100%; /* La bannière occupera 100% de la largeur du conteneur parent */
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center; /* Centrer le texte */
 }
 
 /* Navigation bar styles */
