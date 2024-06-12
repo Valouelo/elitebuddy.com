@@ -110,6 +110,7 @@
 .my-div .name {
   font-weight: bold;
   text-decoration: none;
+  color:#000000
 }
 
 /* Style for the description */
@@ -123,6 +124,7 @@
 .my-div .options {
   margin-top: 10px;
   text-decoration: none;
+  color: black;
 }
 
 /* Style for the price */
@@ -132,6 +134,33 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Style pour le conteneur de la carte */
+.my-div {
+  position: relative; /* Définir la position relative pour permettre le positionnement absolu du bouton */
+}
+
+/* Style for the button */
+.view-buddy-button {
+  position: absolute; /* Position absolue pour positionner le bouton */
+  bottom: 10px; /* Positionner le bouton au bas */
+  right: 10px; /* Positionner le bouton à droite */
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #ea87f7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-buddy-button:hover {
+  background-color: #0056b3;
+}
 
 // Define the button styles
 .button {
