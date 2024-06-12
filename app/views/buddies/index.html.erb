@@ -1,13 +1,57 @@
-<h1>Buddies</h1>
-<ul>
-  <% @buddies.each do |buddy| %>
-    <li>
-      <%= link_to buddy.name, buddy_path(buddy) %>
-      <p><%= buddy.description %></p>
-      <p><%= buddy.options %><p>
-      <p><%= buddy.price_per_day%></p>
-    </li>
-  <% end %>
-</ul>
 
-<%= link_to "New Buddy", new_buddy_path%>
+<div class="page-container">
+
+ <div class="banner-container">
+    <h1>Boost ton projet web avec l'elite des buddies</h1>
+    <img src="path/to/your/banner-image.jpg" alt="Banner Image" class="banner-image">
+  </div>
+
+  <h2>Buddies</h2>
+
+   <nav class="filter-nav">
+            <button class="filter-button" onclick="filterBuddies('name')">Name</button>
+            <button class="filter-button" onclick="filterBuddies('options')">Options</button>
+            <button class="filter-button" onclick="filterBuddies('price_per_day')">Price per Day</button>
+        </nav>
+
+    <div class="grid-container" id="buddies-container">
+        <% @buddies.each do |buddy| %>
+          <div class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price_per_day="<%= buddy.price_per_day %>">
+              <div class="name-description-container"> <!-- Conteneur pour le nom et la description -->
+                  <span class="inline"><%= link_to buddy.name, buddy_path(buddy) %>,</span> <!-- Ajout de la virgule après le lien du nom -->
+                  <span class="inline"><%= buddy.description %></span> <!-- Affichage de la description sur la même ligne -->
+              </div>
+              <p><%= buddy.options %></p>
+              <p><%= buddy.price_per_day %> € par jour</p> <!-- Ajout de "€ par jour" à la suite du prix -->
+            </div>
+        <% end %>
+        </div>
+
+  <script>
+    function filterBuddies(category) {
+        var container = document.getElementById('buddies-container');
+        var buddies = container.getElementsByClassName('my-div');
+        var buddiesArray = Array.from(buddies);
+
+      buddiesArray.sort(function(a, b) {
+          var aValue = a.getAttribute('data-' + category).toLowerCase();
+          var bValue = b.getAttribute('data-' + category).toLowerCase();
+
+          if (aValue < bValue) {
+              return -1;
+          }
+          if (aValue > bValue) {
+              return 1;
+          }
+          return 0;
+      });
+
+        container.innerHTML = '';
+        buddiesArray.forEach(function(buddy) {
+            container.appendChild(buddy);
+        });
+        }
+  </script>
+
+  <%= link_to "New Buddy", new_buddy_path, class: "my-link"%>
+</div>
