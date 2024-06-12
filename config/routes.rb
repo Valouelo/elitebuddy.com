@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'buddies/index'
-  get 'buddies/show'
-  get 'buddies/new'
-  get 'buddies/create'
+
   root 'buddies#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
