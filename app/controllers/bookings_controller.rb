@@ -10,6 +10,8 @@ class BookingsController < ApplicationController
     @buddy = Buddy.find(params[:buddy_id].to_i)
     @booking.buddy = @buddy
     @booking.user = current_user
+    @temps_resa =  (@booking.end_time - @booking.start_time).to_i
+    @booking.total_price = @buddy.price_per_day * temps_resa
     if @booking.save
       redirect_to buddy_booking_path(@buddy, @booking)
     else
