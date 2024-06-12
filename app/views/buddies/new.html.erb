@@ -1,5 +1,9 @@
+<div class="container">
 <h1>New Buddy</h1>
 <%= form_with model: @buddy, local: true do |form| %>
+  <div>
+    <%= form.input :phoot, as: :file %>
+  </div>
   <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -14,7 +18,7 @@
   </div>
     <div>
     <%= form.label :options %>
-    <%= form.select :options %>
+    <%= form.select :options, ["Acoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"] %>
   </div>
   <%= form.submit 'Create Buddy' %>
 <% end %>

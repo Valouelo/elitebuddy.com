@@ -1,0 +1,36 @@
+<!-- app/views/bookings/new.html.erb -->
+<div class="container">
+<h1>Book ton buddy</h1>
+
+<p><%= @buddy.name %></p>
+
+<%= simple_form_for([@buddy, @booking]) do |f| %>
+  <%= f.input :start_time, input_html: { class: 'datetime-picker' } %>
+  <%= f.input :end_time, input_html: { class: 'datetime-picker' } %>
+  <%= f.input :total_price, readonly: true, input_html: { id: 'booking_total_price' } %>
+  <%= f.submit %>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function calculateTotalPrice() {
+      var startDate = document.getElementById('booking_start_time').value;
+      var endDate = document.getElementById('booking_end_time').value;
+      var pricePerDay = <%= @buddy.price_per_day %>;
+
+      if (startDate && endDate) {
+        var numDays = moment(endDate).diff(moment(startDate), 'days') + 1;
+        var totalPrice = numDays * pricePerDay;
+        document.getElementById('booking_total_price').value = totalPrice;
+      } else {
+        document.getElementById('booking_total_price').value = 0;
+      }
+    }
+
+    var startTimeInput = document.getElementById('booking_start_time');
+    var endTimeInput = document.getElementById('booking_end_time');
+
+    startTimeInput.addEventListener('change', calculateTotalPrice);
+    endTimeInput.addEventListener('change', calculateTotalPrice);
+  });
+</script>
