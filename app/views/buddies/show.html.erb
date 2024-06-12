@@ -26,7 +26,7 @@
 
           <div class="card p-3 mb-3">
            <% if @buddy.photo.attached? %>
-            <%= image_tag @buddy.photo width="140px"%>
+            <%= image_tag @buddy.photo%>
           <% else %>
              <img src="images/deliveroo.png" alt="" width="140px">
           <% end %>
@@ -73,7 +73,7 @@
             <div class="d-flex justify-content-between mt-3 border-bottom">
               <p><strong>Dates de réservation</strong></p>
               <p><!-- Champ de filtrage pour la date de début -->
-              
+
              <input type="date" id="start-date-filter" name="start-date-filter"></p>
             </div>
 
