@@ -31,14 +31,15 @@
 
 <div class="grid-container" id="buddies-container">
   <% @buddies.each do |buddy| %>
-    <!-- Envelopper toute la carte dans une balise de lien -->
     <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
-      <div class="name-description-container"> <!-- Conteneur pour le nom et la description -->
-        <span class="name"><%= buddy.name %>,</span> <!-- Afficher le nom du buddy -->
-        <span class="description"><%= buddy.description %></span> <!-- Afficher la description du buddy -->
+      <div class="name-description-container">
+        <span class="name"><%= buddy.name %>,</span>
+        <span class="description"><%= buddy.description %></span>
       </div>
       <p class="options"><%= buddy.options %></p>
-      <p class="price"><%= buddy.price_per_day %> Bitcoin par jour</p> <!-- Afficher le prix par jour -->
+      <p class="price"><%= buddy.price_per_day %> Bitcoin par jour</p>
+       <button class="view-buddy-button">Voir le buddy</button>
+
     </a>
   <% end %>
 </div>
@@ -55,6 +56,6 @@
     // Par exemple, vous pouvez utiliser les valeurs pour afficher uniquement les buddies qui correspondent aux critères sélectionnés
   }
 </script> %>
-
-  <%= link_to "New Buddy", new_buddy_path, class: "my-link"%>
 </div>
+
+<%= link_to "New Buddy", new_buddy_path, class: "my-link"%>
