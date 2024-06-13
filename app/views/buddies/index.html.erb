@@ -26,28 +26,6 @@
 </div>
 
 
-<<<<<<< HEAD
-  <div class="grid-container" id="buddies-container">
-    <% @buddies.each do |buddy| %>
-      <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
-        <div class="name-description-container">
-          <% if buddy.photo.attached? %>
-            <%= image_tag buddy.photo, class: "rounded-circle img-thumbnail", width: "100px"%>
-          <% else %>
-              <img src="images/deliveroo.png" alt="" width="100px">
-          <% end %>
-        </div>
-        <div>
-          <span class="name"><%= buddy.name %></span>
-          <span class="category"><%= buddy.category %></span>
-          <span class="description"><%= buddy.description %></span>
-        </div>
-        <p class="options"><%= buddy.options %></p>
-        <p class="price"><%= buddy.price_per_day %> Bitcoin par jour</p>
-        <button class="view-buddy-button">Voir le buddy</button>
-      </a>
-    <% end %>
-=======
 <div class="grid-container" id="buddies-container">
   <% @buddies.each do |buddy| %>
     <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
@@ -68,7 +46,6 @@
        <button class="view-buddy-button">Voir le buddy</button>
     </a>
   <% end %>
->>>>>>> 787f29aa66da94609a4c9921e287f9c5e7336da1
   </div>
 </div>
 
