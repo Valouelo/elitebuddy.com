@@ -1,0 +1,80 @@
+.container-new {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-user {
+  background-color: #FCA685;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 450px;
+  text-align: center;
+}
+
+h1 {
+  color: #c13325;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.field-container {
+  flex: 1; /* Les éléments prennent une largeur égale */
+  min-width: 200px; /* Largeur minimale pour chaque champ */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9cd2d5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+input[type="file"] {
+  padding: 5px;
+  border: 1px solid #9cd2d5;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: #da4d3f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #e2756a;
+}
