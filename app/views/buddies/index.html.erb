@@ -1,7 +1,9 @@
 <div class="page-container" data-controller="filter">
 
+<div class="second-container">
+
  <div class="banner-container">
-    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Banner_projet.jpg" %>);">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Cover.jpg" %>);">
       <div class="container">
         <h1><strong>Boost ton projet web avec l'elite des buddies !</strong></h1>
       </div>
@@ -10,8 +12,8 @@
   <!-- Barre de filtrage -->
 <div class="filter-bar">
   <!-- Champ de filtrage pour le prix -->
-  <label for="price-filter">Price:</label>
-  <input type="text" id="price-filter" name="price-filter" placeholder="Enter price">
+  <%# <label for="price-filter">Price:</label>
+  <input type="text" id="price-filter" name="price-filter" placeholder="Enter price"> %>
 
   <!-- Champ de filtrage pour la date de début -->
   <label for="start-date-filter">Start Date:</label>
@@ -57,5 +59,6 @@
     </a>
   <% end %>
   </div>
+</div>
 </div>
 </div>
