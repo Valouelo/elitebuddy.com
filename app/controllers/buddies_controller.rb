@@ -7,6 +7,8 @@ class BuddiesController < ApplicationController
   end
 
   def show
+    @buddy = Buddy.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
@@ -41,6 +43,6 @@ class BuddiesController < ApplicationController
   end
 
   def buddy_params
-    params.require(:buddy).permit(:name, :description, :price_per_day, :options, :photo)
+    params.require(:buddy).permit(:name, :description, :price_per_day, :options, :photo, :proposal, :joined_year)
   end
 end
