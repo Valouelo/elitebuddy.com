@@ -10,22 +10,22 @@
   </div>
 
   <!-- Barre de filtrage -->
-<div class="filter-bar">
+<%# <div class="filter-bar">
   <!-- Champ de filtrage pour le prix -->
   <%# <label for="price-filter">Price:</label>
   <input type="text" id="price-filter" name="price-filter" placeholder="Enter price"> %>
 
   <!-- Champ de filtrage pour la date de début -->
-  <label for="start-date-filter">Start Date:</label>
-  <input type="date" id="start-date-filter" name="start-date-filter">
+  <%# <label for="start-date-filter">Start Date:</label>
+  <input type="date" id="start-date-filter" name="start-date-filter"> %>
 
   <!-- Champ de filtrage pour la date de fin -->
-  <label for="end-date-filter">End Date:</label>
-  <input type="date" id="end-date-filter" name="end-date-filter">
+  <%# <label for="end-date-filter">End Date:</label>
+  <input type="date" id="end-date-filter" name="end-date-filter"> %>
 
   <!-- Bouton de soumission du formulaire de filtrage -->
-  <button type="button" onclick="filterBuddies()">Filter</button>
-</div>
+  <%# <button type="button" onclick="filterBuddies()">Filter</button>
+<%# </div> %>
 
 <div class="category-filter">
     <% categories = [] %>
@@ -33,9 +33,9 @@
     <% categories << buddy.category %>
     <% end %>
     <% categories.uniq.each do |category| %>
-      <span data-action="click->filter#filter"><%= category %></span>
+      <span class="filter-option" data-action="click->filter#filter"><%= category %></span>
     <% end %>
-    <span data-action="click->filter#reset">reset</span>
+    <span class="filter-reset" data-action="click->filter#reset">Reset</span>
 </div>
 
 <div class="grid-container" id="buddies-container">
