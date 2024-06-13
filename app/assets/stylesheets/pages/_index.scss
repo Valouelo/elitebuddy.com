@@ -82,6 +82,7 @@
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  font-family: roboto;
 }
 
 .banner {
@@ -276,40 +277,44 @@ a {
 .card {
   border: none;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #d8d8d8;
+  box-shadow: 6px 6px 6px rgb(255, 254, 254);
   transition: transform 0.2s;
   font-family: arial, sans-serif;
+  background: black;
 }
 .card:hover {
   transform: translateY(-10px);
+  background-color: #B15EFF;
 }
 .card img.rounded-circle {
-  border: 3px solid #f8f9fa;
+  border: 2px solid #ffffff;
 }
 .card-title {
   font-weight: bold;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .card-subtitle {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #ffffff;
 }
 .card-text {
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #ffffff;
 }
 .card-trip-pricing {
-  font-size: 1.2rem;
-  color: #28a745;
+  font-size: 0.7rem;
+  color: #dddddd;
   font-weight: bold;
 }
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #EFECEC;
+  border-color: #ce29d0;
   border-radius: 50px;
   padding: 0.5rem 1rem;
+  color: #000000
 }
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #004085;
+  background-color: #000408;
+  border-color: #B15EFF;
 }
