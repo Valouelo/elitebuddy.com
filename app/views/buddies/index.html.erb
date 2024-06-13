@@ -31,13 +31,14 @@
     <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
       <div class="name-description-container">
         <% if buddy.photo.attached? %>
-          <%= image_tag buddy.photo, class: "rounded-circle img-thumbnail", width: "100px"%>
+          <%= cl_image_tag buddy.photo.key, class: "rounded-circle img-thumbnail", width: "100px"%>
         <% else %>
             <img src="images/deliveroo.png" alt="" width="100px">
         <% end %>
       </div>
       <div>
         <span class="name"><%= buddy.name %>,</span>
+        <span class="category"><%= buddy.category %>,</span>
         <span class="description"><%= buddy.description %></span>
       </div>
       <p class="options"><%= buddy.options %></p>
