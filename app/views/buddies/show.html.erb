@@ -17,15 +17,23 @@
   </div>
     <div class="container py-3">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="card p-3 mb-3">
+            <div class="container d-flex">
+              <div class="">
             <% if @buddy.photo.attached? %>
-              <%= cl_image_tag @buddy.photo.key, class: "rounded-circle img-thumbnail", width: "250px"%>
+              <%= cl_image_tag @buddy.photo.key, class: "rounded-circle img-thumbnail", width: "280px"%>
             <% else %>
               <img src="images/deliveroo.png" alt="" width="140px">
             <% end %>
-            <h2><%= @buddy.name %></h2>
-            <span><%= @buddy.price_per_day %>€ la journée</span>
+            </div>
+            <div class="w-30 p-5">
+              <div>
+                <h2><%= @buddy.name %></h2>
+                <span><%= @buddy.price_per_day %>€ la journée</span>
+              </div>
+            </div>
+            </div>
           </div>
 
           <div class="card p-3 mb-3">
