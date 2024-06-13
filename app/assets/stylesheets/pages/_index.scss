@@ -3,7 +3,6 @@
 @import "new";
 
 
-
 /* Define the page container */
 .page-container {
   margin: 0px;
@@ -24,6 +23,57 @@
 // height: 400px;
 // display: flex;
 
+.category-filter {
+  background-color: black;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.filter-options {
+  display: flex;
+}
+
+.filter-option {
+  background-color: grey;
+  color: white;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: #B15EFF;
+  transform: translateY(-3px);
+}
+
+.filter-reset {
+  background-color: white;
+  color: gray;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-reset:hover {
+  color: white;
+  background-color: gray;
+  transform: translateY(-3px);
+}
 
 
 .container h1 {
