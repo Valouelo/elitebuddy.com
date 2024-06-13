@@ -1,13 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+
 /* Define the page container */
 .page-container {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.second-container {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #ffffff;
+}
+
+// .container {
+// background: linear-gradient(#c13325, #dfa39d);
+// border-radius: 9px;
+// height: 400px;
+// display: flex;
+
+
+
+.container h1 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .banner {
@@ -18,18 +41,18 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner h1 {
-  margin: 0px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
+  justify-content: flex-start;
   text-align: center;
 }
+
+// .banner h1 {
+//   margin: 0px;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   font-size: 32px;
+//   font-weight: bold;
+//   text-align: center;
+// }
 
 h2 {
   margin-top: 60px;
