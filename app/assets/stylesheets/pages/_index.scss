@@ -1,13 +1,36 @@
 // Import page-specific CSS files here.
 @import "home";
 
+
+
 /* Define the page container */
 .page-container {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.second-container {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #ffffff;
+}
+
+// .container {
+// background: linear-gradient(#c13325, #dfa39d);
+// border-radius: 9px;
+// height: 400px;
+// display: flex;
+
+
+
+.container h1 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .banner {
@@ -18,18 +41,18 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner h1 {
-  margin: 0px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
+  justify-content: flex-start;
   text-align: center;
 }
+
+// .banner h1 {
+//   margin: 0px;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   font-size: 32px;
+//   font-weight: bold;
+//   text-align: center;
+// }
 
 h2 {
   margin-top: 60px;
@@ -81,12 +104,12 @@ h2 {
   grid-gap: 20px;
 }
 
-/* Define a grid container */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
+// /* Define a grid container */
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 20px;
+// }
 
 /* Apply the grid container to your div */
 .my-div {
@@ -197,4 +220,45 @@ a {
 // Apply the button styles to the link
 .my-link {
   @extend .button;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  font-family: arial, sans-serif;
+}
+.card:hover {
+  transform: translateY(-10px);
+}
+.card img.rounded-circle {
+  border: 3px solid #f8f9fa;
+}
+.card-title {
+  font-weight: bold;
+  color: black;
+}
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+.card-trip-pricing {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
 }
