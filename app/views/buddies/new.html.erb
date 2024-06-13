@@ -38,5 +38,28 @@
         </div>
       <% end %>
     </div>
+<<<<<<< HEAD
+    <div>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+    <div>
+      <%= form.label :description %>
+      <%= form.text_area :description %>
+    </div>
+    <div>
+      <%= form.label :price_per_day %>
+      <%= form.number_field :price_per_day %>
+    </div>
+    <div>
+      <%= form.label :options %>
+     <%= form.collection_check_boxes :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"], :to_s, :to_s %>
+    </div>
+    <div>
+      <%= form.submit 'Create Buddy' %>
+    </div>
+  <% end %>
+=======
   </div>
+>>>>>>> eb42422bce6b3f87edf27b930c4c4918791cc35f
 </div>
