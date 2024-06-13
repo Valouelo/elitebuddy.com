@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to buddy_booking_path(@buddy, @booking)
     else
-      render :show, status: :unprocessable_entity
+      render template: 'buddies/show', status: :unprocessable_entity
     end
   end
 
