@@ -23,7 +23,7 @@
     </div>
     <div>
       <%= form.label :options %>
-      <%= form.select :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"] %>
+      <%= form.collection_check_boxes :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"], :to_s, :to_s %>
     </div>
     <div>
       <%= form.submit 'Update Buddy' %>

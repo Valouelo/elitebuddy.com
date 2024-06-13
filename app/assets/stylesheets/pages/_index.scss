@@ -1,13 +1,88 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "new";
+
 
 /* Define the page container */
 .page-container {
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  background-color: black;
+}
+
+.second-container {
   margin: 20px;
   padding: 20px;
-  border: 1px solid #ccc;
+}
+
+// .container {
+// background: linear-gradient(#c13325, #dfa39d);
+// border-radius: 9px;
+// height: 400px;
+// display: flex;
+
+.category-filter {
+  background-color: black;
+  border-color: white;
+  border-style: solid;
+  border-width: 2px;
   border-radius: 8px;
-  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.filter-options {
+  display: flex;
+}
+
+.filter-option {
+  background-color: grey;
+  color: white;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-option:hover {
+  background-color: #B15EFF;
+  transform: translateY(-3px);
+}
+
+.filter-reset {
+  background-color: white;
+  color: gray;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-reset:hover {
+  color: white;
+  background-color: gray;
+  transform: translateY(-3px);
+}
+
+
+.container h1 {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: roboto;
 }
 
 .banner {
@@ -18,18 +93,18 @@
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner h1 {
-  margin: 0px;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  font-size: 32px;
-  font-weight: bold;
+  justify-content: flex-start;
   text-align: center;
 }
+
+// .banner h1 {
+//   margin: 0px;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   font-size: 32px;
+//   font-weight: bold;
+//   text-align: center;
+// }
 
 h2 {
   margin-top: 60px;
@@ -81,12 +156,12 @@ h2 {
   grid-gap: 20px;
 }
 
-/* Define a grid container */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
-}
+// /* Define a grid container */
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 20px;
+// }
 
 /* Apply the grid container to your div */
 .my-div {
@@ -197,4 +272,49 @@ a {
 // Apply the button styles to the link
 .my-link {
   @extend .button;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  border: 1px solid #d8d8d8;
+  box-shadow: 6px 6px 6px rgb(255, 254, 254);
+  transition: transform 0.2s;
+  font-family: arial, sans-serif;
+  background: black;
+}
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #B15EFF;
+}
+.card img.rounded-circle {
+  border: 2px solid #ffffff;
+}
+.card-title {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.card-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.card-trip-pricing {
+  font-size: 0.7rem;
+  color: #dddddd;
+  font-weight: bold;
+}
+.btn-primary {
+  background-color: #EFECEC;
+  border-color: #ce29d0;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  color: #000000
+}
+.btn-primary:hover {
+  background-color: #000408;
+  border-color: #B15EFF;
 }
