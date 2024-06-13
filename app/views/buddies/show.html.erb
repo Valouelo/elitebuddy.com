@@ -21,15 +21,23 @@
 
     <div class="container py-3">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <div class="card p-3 mb-3">
+            <div class="container d-flex">
+              <div class="">
             <% if @buddy.photo.attached? %>
-              <%= cl_image_tag @buddy.photo, class: "rounded-circle img-thumbnail", width: "250px"%>
+              <%= cl_image_tag @buddy.photo.key, class: "rounded-circle img-thumbnail", width: "280px"%>
             <% else %>
               <img src="images/deliveroo.png" alt="" width="140px">
             <% end %>
-            <h2><%= @buddy.name %></h2>
-            <span><%= @buddy.price_per_day %>€ la journée</span>
+            </div>
+            <div class="w-30 p-5">
+              <div>
+                <h2><%= @buddy.name %></h2>
+                <span><%= @buddy.price_per_day %>€ la journée</span>
+              </div>
+            </div>
+            </div>
           </div>
 
           <div class="card p-3 mb-3">
@@ -54,7 +62,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="bg-white border p-3 sticky-top">
             <h2>Reservation :</h2>
             <div data-controller="price" data-price-price-value="<%= @buddy.price_per_day %>">
@@ -69,12 +77,14 @@
                   <p>À définir</p>
                 </div>
 
-                <div class="d-flex justify-content-between mt-3 border-bottom">
+                <div class="d-flex gap-3 justify-content-between mt-3 border-bottom p-1">
                   <p><strong>Dates de réservation</strong></p>
-                  <p>
+                  <div class='mx-6'>
                     <%= f.input :start_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "startTime" } } %>
+                  </div>
+                  <div class='mx-6 d-flex'>
                     <%= f.input :end_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "endTime" } } %>
-                  </p>
+                  </div>
                 </div>
 
                 <div class="d-flex justify-content-between mt-3">
