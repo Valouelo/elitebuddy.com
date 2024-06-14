@@ -1,14 +1,33 @@
-<div class="container mt-5">
-  <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-    <div class="card-body text-center">
-      <h1 class="card-title">Confirmation de la Réservation</h1>
-      <div class="booking-details my-4">
-        <h2 class="h4">Merci</h2>
-        <p class="card-text">Vous avez réservé <strong><%= @buddy.name %></strong>.</p>
-        <p class="card-text">Dates: <%= @booking.start_time.strftime("%d %B %Y") %> - <%= @booking.end_time.strftime("%d %B %Y") %></p>
-        <p class="card-text">Prix total: <%= number_to_currency(@booking.total_price, unit: "€") %></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Confirmation de la Réservation</title>
+</head>
+<body>
+  <div class="container-fluid d-flex justify-content-center align-items-center vh-100 bg-black">
+    <div class="card-booking text-white rounded shadow-lg border border-white">
+      <div class="card-body text-center">
+        <h1 class="card-title mb-4">Confirmation de la réservation</h1>
+        <div class="booking-details my-4">
+          <h2 class="h4 mb-3">Merci</h2>
+          <div class="">
+            <% if @buddy.photo.attached? %>
+              <%= cl_image_tag @buddy.photo.key, class: "rounded-circle img-thumbnail", width: "100px" %>
+            <% else %>
+              <img src="images/deliveroo.png" alt="" width="140px">
+            <% end %>
+          </div>
+          <p class="card-text">Vous avez réservé <strong><%= @buddy.name %></strong>.</p>
+          <p class="card-text">Dates: <%= @booking.start_time.strftime("%d %B %Y") %> - <%= @booking.end_time.strftime("%d %B %Y") %></p>
+          <p class="card-text">Prix total: <%= number_to_currency(@booking.total_price, unit: "€") %></p>
+        </div>
+        <a class="btn-merci btn-lg mt-4" href="<%= root_path %>">Home</a>
       </div>
-      <a class="btn btn-primary btn-lg mt-3" href="<%= root_path %>">Retour à l'accueil</a>
     </div>
   </div>
-</div>
+</body>
+</html>
