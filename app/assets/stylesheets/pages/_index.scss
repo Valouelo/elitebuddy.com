@@ -266,7 +266,7 @@ a {
   padding: 10px 20px;
   color: white;
   background-color: black;
-  border-color: white;
+  border: 1px solid white;
   text-decoration: none;
   border-radius: 15px;
   transition: background-color 0.3s ease;
@@ -275,6 +275,7 @@ a {
 .button:hover {
   color: black;
   background-color: white;
+  border: 1px solid black;
 }
 
 // Apply the button styles to the link
@@ -303,7 +304,7 @@ a {
   color: rgb(255, 255, 255);
 }
 .card-subtitle {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #ffffff;
 }
 .card-text {
@@ -311,19 +312,21 @@ a {
   color: #ffffff;
 }
 .card-trip-pricing {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #dddddd;
+  text-align: center;
   font-weight: bold;
 }
 .btn-primary {
-  background-color: #EFECEC;
-  border-color: #3EDBF0;
-  border-radius: 50px;
+  color: white;
+  background-color: black;
+  border-color: white;
+  border-radius: 15px;
   padding: 0.5rem 1rem;
-  color: #000000
 }
 .btn-primary:hover {
-  background-color: #000408;
-  border-color: #3EDBF0;
-  color:#EFECEC
+  color: #000000;
+  background-color: white;
+  border-color: black;
+  border-radius: 15px;
 }
