@@ -6,12 +6,16 @@
       <%= form.file_field :photo %>
     </div>
     <div>
-      <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.label :category %>
+      <%= form.select :category, ["Tarpin", "Estrasse", "Minot", "Brèle"] %>
+    </div>
+      <div>
+      <%= form.label :"Ce que je propose" %>
+      <%= form.text_field :proposal%>
     </div>
     <div>
-      <%= form.label :description %>
-      <%= form.text_area :description %>
+      <%= form.label :"Buddy depuis" %>
+      <%= form.select :joined_year, options_for_select((2000..Date.current.year).to_a.reverse), { prompt: "Select Year" }, { class: "form-control" } %>
     </div>
     <div>
       <%= form.label :price_per_day %>
@@ -19,7 +23,7 @@
     </div>
     <div>
       <%= form.label :options %>
-      <%= form.select :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"] %>
+      <%= form.collection_check_boxes :options, ["Alcoolique", "Marroneur", "Sexy", "Humour de merde", "Parfait comme Gaulthier"], :to_s, :to_s %>
     </div>
     <div>
       <%= form.submit 'Update Buddy' %>
