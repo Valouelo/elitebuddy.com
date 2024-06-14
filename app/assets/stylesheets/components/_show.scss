@@ -1,5 +1,5 @@
 .box {
-  background-color: rgb(31, 31, 31);
+  background-color: black;
   position: relative;
 }
 
@@ -16,19 +16,19 @@
   transform: scale(1);
   z-index: -1;
   background-size: 500%;
-  animation: animate 20s infinite;
+  animation: animate 40s infinite;
 }
 
-.box-2 {
-  border-radius: 10%;
-  background: linear-gradient(45deg, #ff0000, #00f0f0, #00ff00, #0000ff, #ff0000, #00f0f0, #00ff00, #0000ff, #f00f0f);
-  width: 100%;
-  height: 100%;
-  transform: scale(1);
-  z-index: -1;
-  background-size: 500%;
-  animation: animate 20s infinite;
-}
+// .box-2 {
+//   border-radius: 10%;
+//   background: linear-gradient(45deg, #ff0000, #00f0f0, #00ff00, #0000ff, #ff0000, #00f0f0, #00ff00, #0000ff, #f00f0f);
+//   width: 100%;
+//   height: 100%;
+//   transform: scale(1);
+//   z-index: -1;
+//   background-size: 500%;
+//   animation: animate 20s infinite;
+// }
 
 .box::after {
   filter: blur(20px);
@@ -47,11 +47,70 @@
   background: linear-gradient(45deg, #ff0000, #00f0f0, #00ff00, #0000ff, #ff0000, #00f0f0, #00ff00, #0000ff, #f00f0f);
   border: none !important;
   transform: scale(1);
+  z-index: -1;
   background-size: 500%;
-  animation: animate 20s infinite;
+  animation: animate 30s infinite;
 }
 
-// .booking_start_time input {
-//   background-color: black !important;
-//   color: white;
+.carda {
+  background-color: black;
+  border-radius: 15px;
+  border: 1px solid white;
+  box-shadow: 5px 5px 5px rgb(255, 254, 254);
+  transition: transform 0.2s;
+  font-family: arial, sans-serif;
+  background: black;
+}
+.carda:hover {
+  transform: translateY(-10px);
+
+}
+
+.btn {
+  background-color: #EFECEC;
+  border-color: #3EDBF0;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  color: #000000
+}
+.btn:hover {
+  background: linear-gradient(45deg, #ff0000, #00f0f0, #00ff00, #0000ff, #ff0000, #00f0f0, #00ff00, #0000ff, #f00f0f);
+  border: none !important;
+  transform: scale(1);
+  z-index: -1;
+  background-size: 1000%;
+  animation: animate 30s infinite;
+}
+
+
+//   padding: 20px 50px;
+//   font-size: 1.5rem;
+//   cursor: pointer;
+//   position: relative;
+//   transition: all .2s;
+//   overflow: hidden;
+//   color: #fff;
+//   border-radius: 30px;
+//   border: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+// }
+
+// .btn4::after {
+//   content: '';
+//   width: 200px;
+//   height: 200px;
+//   position: absolute;
+//   top: -50px;
+//   left: -100px;
+//   background-color: linear-gradient(225deg,#27d86c 0%, #26caf8 50%, #c625d0 100%);
+//   z-index: -1;
+//   transition: all .5s;
+// }
+
+// .btn4:hover::after {
+//   transform: rotate(150deg);
+// }
+
+// .btn4:hover {
+//   transform: translate(0,-6px);
+//   box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25), -10px 10px 25px 0px rgba(39, 200, 255, .25);
 // }
