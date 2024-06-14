@@ -11,16 +11,20 @@
 }
 
 .container-user {
-  background-color: white;
+  background-color: black;
   border-radius: 10px;
+  border-color: white;
+  border-style: solid;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-top: 80px;
+  margin-bottom: 50px;
   width: 450px;
   text-align: center;
 }
 
 h1 {
-  color: #c13325;
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -30,28 +34,26 @@ h1 {
 
 .form-group {
   margin-bottom: 15px;
-}
-
-.form-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .field-container {
-  flex: 1; /* Les éléments prennent une largeur égale */
-  min-width: 200px; /* Largeur minimale pour chaque champ */
+  flex: 1;
+  min-width: 0;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
-  color: #333;
+  color: white;
 }
 
 .form-control {
   width: 100%;
   padding: 10px;
-  border: 1px solid #9cd2d5;
+  border: 1px solid #3EDBF0;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
@@ -65,7 +67,7 @@ input[type="file"] {
 }
 
 .submit-button {
-  background-color: #da4d3f;
+  background-color: #3EDBF0;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -76,5 +78,5 @@ input[type="file"] {
 }
 
 .submit-button:hover {
-  background-color: #e2756a;
+  background-color: #3edbf072;
 }
