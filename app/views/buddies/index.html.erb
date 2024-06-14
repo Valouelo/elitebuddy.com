@@ -1,7 +1,5 @@
 <div class="page-container" data-controller="filter">
-
   <div class="second-container">
-
     <div class="banner-container">
       <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Cover.jpg" %>);">
         <div class="container">
@@ -9,29 +7,10 @@
         </div>
       </div>
     </div>
-
-  <!-- Barre de filtrage -->
-<%# <div class="filter-bar">
-  <!-- Champ de filtrage pour le prix -->
-  <%# <label for="price-filter">Price:</label>
-  <input type="text" id="price-filter" name="price-filter" placeholder="Enter price"> %>
-
-  <!-- Champ de filtrage pour la date de début -->
-  <%# <label for="start-date-filter">Start Date:</label>
-  <input type="date" id="start-date-filter" name="start-date-filter"> %>
-
-  <!-- Champ de filtrage pour la date de fin -->
-  <%# <label for="end-date-filter">End Date:</label>
-  <input type="date" id="end-date-filter" name="end-date-filter"> %>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
     <div class="category-filter">
         <% categories = [] %>
         <% @buddies.each do |buddy| %>
-        <% categories << buddy.category %>
+          <% categories << buddy.category %>
         <% end %>
         <% categories.uniq.each do |category| %>
           <span class="filter-option" data-action="click->filter#filter"><%= category %></span>
@@ -42,9 +21,9 @@
     <div class="container my-5" id="buddies-container">
       <div class="row">
           <% @buddies.each do |buddy| %>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4"  data-filter-target="card" data-category="<%= buddy.category %>">
                 <div class="card h-100">
-                  <a href="<%= buddy_path(buddy) %>" class="text-decoration-none" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>" data-filter-target="card" data-category="<%= buddy.category %>">
+                  <a href="<%= buddy_path(buddy) %>" class="text-decoration-none" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>" >
                     <div class="d-flex justify-content-center mt-3">
                       <% if buddy.photo.attached? %>
                         <%= cl_image_tag buddy.photo.key, class: "rounded-circle img-thumbnail", width: "100", height: "100" %>
