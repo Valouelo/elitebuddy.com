@@ -1,4 +1,5 @@
 <div class="page-container" data-controller="filter">
+<<<<<<< HEAD
 
   <div class="second-container">
 
@@ -7,6 +8,15 @@
         <div class="container">
           <h1><strong>Boost ton projet web avec l'élite des buddies !</strong></h1>
         </div>
+=======
+
+<div class="second-container">
+
+ <div class="banner-container">
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "Cover.jpg" %>);">
+      <div class="container">
+        <h1><strong>Boost ton projet web avec l'élite des buddies !</strong></h1>
+>>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
       </div>
     </div>
 
@@ -24,6 +34,7 @@
   <%# <label for="end-date-filter">End Date:</label>
   <input type="date" id="end-date-filter" name="end-date-filter"> %>
 
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -67,3 +78,44 @@
     </div>
   </div>
 </div>
+=======
+  <!-- Bouton de soumission du formulaire de filtrage -->
+  <%# <button type="button" onclick="filterBuddies()">Filter</button>
+<%# </div> %>
+
+<div class="category-filter">
+    <% categories = [] %>
+    <% @buddies.each do |buddy| %>
+    <% categories << buddy.category %>
+    <% end %>
+    <% categories.uniq.each do |category| %>
+      <span class="filter-option" data-action="click->filter#filter"><%= category %></span>
+    <% end %>
+    <span class="filter-reset" data-action="click->filter#reset">Reset</span>
+</div>
+
+<div class="grid-container" id="buddies-container">
+  <% @buddies.each do |buddy| %>
+    <a href="<%= buddy_path(buddy) %>" class="my-div" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>" data-filter-target="card" data-category="<%= buddy.category %>">
+      <div class="name-description-container">
+        <% if buddy.photo.attached? %>
+          <%= cl_image_tag buddy.photo.key, class: "rounded-circle img-thumbnail", width: "100px"%>
+        <% else %>
+            <img src="images/deliveroo.png" alt="" width="100px">
+        <% end %>
+      </div>
+      <div>
+        <p class="name"><%= buddy.name %>,</p>
+        <p class="category"><%= buddy.category %>,</p>
+        <p class="description"><%= buddy.description %></p>
+      </div>
+      <p class="options"><%= buddy.options %></p>
+      <p class="price"><%= buddy.price_per_day %> Bitcoins par jour</p>
+       <button class="view-buddy-button">Voir le buddy</button>
+    </a>
+  <% end %>
+  </div>
+</div>
+</div>
+</div>
+>>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
