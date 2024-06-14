@@ -45,8 +45,8 @@
 }
 
 .filter-option {
-  background-color: white;
-  color: black;
+  background-color: grey;
+  color: white;
   padding: 10px 15px;
   margin-right: 10px;
   border-radius: 5px;
@@ -60,8 +60,8 @@
 }
 
 .filter-reset {
-  background-color: gray;
-  color: white;
+  background-color: white;
+  color: gray;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -70,8 +70,8 @@
 }
 
 .filter-reset:hover {
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: gray;
   transform: translateY(-3px);
 }
 
