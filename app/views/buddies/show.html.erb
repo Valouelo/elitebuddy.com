@@ -13,19 +13,6 @@
     <div class="container d-flex align-items-center justify-content-between py-2">
     </div>
   </div>
-<<<<<<< HEAD
-    <div class="container p-3" id="box1">
-      <div class="row">
-        <div class="col-md-8">
-          <div class=" box card p-3 mb-3 bg-dark text-white">
-            <div class="container d-flex">
-              <div class="">
-            <% if @buddy.photo.attached? %>
-              <%= cl_image_tag @buddy.photo.key, class: "rounded-circle img-thumbnail", width: "280px" %>
-            <% else %>
-              <img src="images/deliveroo.png" alt="" width="140px">
-            <% end %>
-=======
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
@@ -38,92 +25,56 @@
               <img src="images/deliveroo.png" alt="" width="140px">
             <% end %>
 
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
             </div>
             <div class="w-30 p-5">
               <div>
                 <h2><%= @buddy.name %></h2>
                 <span><%= @buddy.category %></span>
                 <span><%= @buddy.price_per_day %> <img src='https://logo-marque.com/wp-content/uploads/2020/08/Bitcoin-Logo.png' alt='Bitcoin Logo' style='width: 50px; height: 30px;'> la journée</span>
-<<<<<<< HEAD
-               </div>
-=======
               </div>
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
             </div>
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div class="bg-dark box card p-3 mb-3 text-white">
-=======
           <div class="card p-3 mb-3">
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
             <p><strong>DESCRIPTION :</strong></p>
             <p><%= @buddy.description %></p>
             <p><%= @buddy.options %></p>
           </div>
 
-<<<<<<< HEAD
-          <div class=" bg-dark box card p-3 mb-3 text-white">
-=======
           <div class="card p-3 mb-3">
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
             <p><strong>Ce que propose ce buddy :</strong></p>
             <p><small><%= @buddy.proposal %></small></p>
           </div>
 
-<<<<<<< HEAD
-          <div class="box bg-dark card p-3 mb-3 text-white">
-=======
           <div class="card p-3 mb-3">
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
             <p><strong>Buddy depuis </strong></p>
             <span><%= @buddy.joined_year %></span>
           </div>
         </div>
 
 
-<<<<<<< HEAD
-          <div class="box-2 col-md-4 text-white">
-            <div class="box-2 bg-dark p-3 sticky-top">
-=======
           <div class="col-md-4">
             <div class="bg-white border p-3 sticky-top">
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
               <h2>Reservation :</h2>
               <div data-controller="price" data-price-price-value="<%= @buddy.price_per_day %>">
                 <%= simple_form_for([@buddy, @booking]) do |f| %>
                   <div class="d-flex justify-content-between mt-3">
-<<<<<<< HEAD
-                    <p><strong>Prix Jour :</strong></p>
-=======
                     <p><strong>Prix Jour</strong></p>
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
                     <p><%= @buddy.price_per_day %> €</p>
                   </div>
 
                   <div class="d-flex justify-content-between mt-3">
-<<<<<<< HEAD
-                    <p><strong>Frais déplacement :</strong></p>
-=======
                     <p><strong>Frais déplacement</strong></p>
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
                     <p>À définir</p>
                   </div>
 
                   <div class="d-flex justify-content-between mt-3 border-bottom">
-<<<<<<< HEAD
-                    <p style="width: 90px;"><strong>Dates :</strong></p>
-                    <%= f.input :start_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "startTime" }, style: "width: 110px;" } %>
-                    <%= f.input :end_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "endTime" }, style: "width: 110px;" } %>
-=======
                     <p><strong>Dates de réservation</strong></p>
                     <p>
                       <%= f.input :start_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "startTime" } } %>
                       <%= f.input :end_time, as: :string, input_html: { data: { controller: "datepicker", action: "change->price#calculatePrice", price_target: "endTime" } } %>
                     </p>
->>>>>>> 10949a50c2a09bd3dd6dc16429c84156038dbd60
                   </div>
 
 
