@@ -5,7 +5,6 @@ export default class extends Controller {
   static targets = [ "card" ]
 
   filter(event) {
-
     const filterCategory = event.target.innerHTML
     const cards = this.cardTargets
     cards.forEach(function (card) {
