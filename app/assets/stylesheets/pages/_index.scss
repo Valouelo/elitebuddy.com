@@ -28,7 +28,7 @@
   border-color: white;
   border-style: solid;
   border-width: 2px;
-  border-radius: 8px;
+  border-radius: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
   margin-bottom: 20px;
@@ -45,33 +45,37 @@
 }
 
 .filter-option {
-  background-color: grey;
   color: white;
-  padding: 10px 15px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 7px 10px;
   margin-right: 10px;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .filter-option:hover {
-  background-color: #3EDBF0;
+  color: #000000;
+  background-color: white;
+  border-radius: 15px;
   transform: translateY(-3px);
 }
 
 .filter-reset {
   background-color: white;
-  color: gray;
+  color: black;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 7px 10px;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .filter-reset:hover {
   color: white;
-  background-color: gray;
+  background-color: black;
+  border: 1px solid white;
   transform: translateY(-3px);
 }
 
@@ -137,16 +141,18 @@ h2 {
 /* Styles pour le bouton de filtrage */
 .filter-bar button {
   padding: 8px 16px;
-  background-color: #daa520;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
+  color: white;
+  background-color: black;
+  border-color: white;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .filter-bar button:hover {
-  background-color: #0056b3;
+  color: #000000;
+  background-color: white;
+  border-radius: 15px;
 }
 
 /* Define a grid container */
@@ -258,15 +264,17 @@ a {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #3EDBF0;
-  color: #fff;
+  color: white;
+  background-color: black;
+  border-color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
 }
 
 .button:hover {
-  background-color: #3EDBF0;
+  color: black;
+  background-color: white;
 }
 
 // Apply the button styles to the link
