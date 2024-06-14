@@ -44,7 +44,7 @@
           <% @buddies.each do |buddy| %>
             <div class="col-md-4 mb-4">
                 <div class="card h-100">
-                  <a href="<%= buddy_path(buddy) %>" class="text-decoration-none" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>">
+                  <a href="<%= buddy_path(buddy) %>" class="text-decoration-none" data-name="<%= buddy.name %>" data-options="<%= buddy.options %>" data-price-per-day="<%= buddy.price_per_day %>" data-filter-target="card" data-category="<%= buddy.category %>">
                     <div class="d-flex justify-content-center mt-3">
                       <% if buddy.photo.attached? %>
                         <%= cl_image_tag buddy.photo.key, class: "rounded-circle img-thumbnail", width: "100", height: "100" %>
@@ -55,7 +55,8 @@
                     <div class="card-body text-center">
                         <h5 class="card-title"><%= buddy.name %></h5>
                         <p class="card-text"><%= buddy.description %></p>
-                        <h2 class="card-trip-pricing"><%= buddy.price_per_day %> Bitcoin par jour</h2>
+                        <p class="card-options"><%= buddy.options %></p>
+                        <h2 class="card-trip-pricing"><%= buddy.price_per_day %> Bitcoins par jour</h2>
                         <button class="btn btn-primary mt-2" >Voir le buddy</button>
                     </div>
                   </a>
